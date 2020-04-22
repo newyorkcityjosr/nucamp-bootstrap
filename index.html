@@ -12,11 +12,11 @@
 <body>
     <header class="jumbotron jumbotron-fluid">
         <div class="col">
-            <a class="btn btn-primary float-right" href="#reserveForm" role="button" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
+            <a data-toggle="modal" data-target='#reserve' class="btn btn-primary float-right">Reserve Campsite</a>
         </div>
         <div class="container">
             <div class="row"> 
-           <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
                 <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
                  </div>
                 <div class="col">
@@ -26,6 +26,61 @@
             </div>
         </div>
     </header>
+    <div id="reserve" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve Campsite </h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        
+                        <form id="reserveForm">
+                            <div class="row form-group">
+                                <div class="col-sm-6">
+                                <label>Number of Campers</label>
+                                </div>
+                                <div class="col-sm-6">
+                                <select class="form-control" name="numCampers" id="numCampers">
+                                    <option selected>Select...</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-6">
+                                <label>Date</label>
+                                </div>
+                                <div class="col-sm-6">
+                                <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div> 
+                            <div class="row form-group"><label class="col-form-label col">Campsite Type</label>
+                                <div class="col-sm-6 btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn-success btn active"><input name ="siteType" type="radio" type="submit" value="tent">Tent</label>
+                                <label class="btn-primary btn"><input name ="siteType" type="radio" type="submit" value="rv">RV</label>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-sm-6">
+                                    <button class="btn btn-primary" type="submit">Reverse</button>
+                                    <button class="btn btn-secondary" type="submit">Cancel</button>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+      
+    
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
@@ -42,7 +97,7 @@
                 <a data-toggle="modal" data-target="#loginModal">
                 <i class="fa fa-sign-in"></i> Login</a>
             </span>
-        </div>
+            </div>
         </div>
     </nav>
     <div id="loginModal" class="modal fade" role="dialog">
@@ -82,8 +137,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
 
+    <div class="container">
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -122,88 +177,123 @@
                             <span class="carousel-control-next-icon"></span>
                             <span class="sr-only">Next</span>
                         </a>
+                    </div>
                 </div>
             </div>
         </div>
-
+    
         <div class="row row-content align-items-center">
-        <div class="col-sm-4 order-sm-last col-md-3">
-            <h2 class="text-sm-right">Discover & Review</h2>
-        </div>
-        <div class="col">
-            <div class="media">
-                <img class="mr-3 img-thumbnail rounded float-right" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
-                <div class="media-body align-self-center">
-                    <h3>Our Campsites</h3>
-                    <p class="float-left d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Discover & Review</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <img class="mr-3 img-thumbnail rounded float-right" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                    <div class="media-body align-self-center">
+                        <h3>Our Campsites</h3>
+                        <p class="float-left d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="row  row-content align-items-center">
-        <div class="col-sm-4 col-md-3">
-           <h2 class="text-sm-left">Featured Campsites</h2>
-           
-        </div>
-        <div class="col">
-            <div class="media">
-            <div class="media-body align-self-center">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+    
+        <div class="row  row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+               <h2 class="text-sm-left">Featured Campsites</h2>
+               
             </div>
-            <img class="d-flex mr-3 img-thumbnail rounded" src="img/react-lake-thumb.jpg" alt="lake">
+            <div class="col">
+                <div class="media">
+                <div class="media-body align-self-center">
+                    <h3>React Lake Campground</h3>
+                    <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                </div>
+                <img class="d-flex mr-3 img-thumbnail rounded" src="img/react-lake-thumb.jpg" alt="lake">
+            </div>
         </div>
-    </div>
+            </div>
+                <div class="row row-content align-items-center">
+                    <div class="col-sm-4 order-sm-last col-md-3">
+                        <h2 class="text-sm-right">Our Community Partners</h2>
+                    </div>
+                    <div class="col">
+                        <div class="media">
+                            <img class="d-flex mr-3 img-thumbnail float-right" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
+                            <div class="media-body align-self-center">
+                                <h3>Bootstrap Outfitters</h3>
+                                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
-            <div class="row row-content align-items-center">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 mx-auto col-form-label">
+                <div class="card ">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body ">
+                        <form id="reserveForm">
+                            <div class="row form-group">
+                                <div class="col-sm-6">
+                                <label>Number of Campers</label>
+                                </div>
+                                <div class="col-sm-6">
+                                <select class="form-control" name="numCampers" id="numCampers">
+                                    <option selected>Select...</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-6">
+                                <label>Date</label>
+                                </div>
+                                <div class="col-sm-6">
+                                <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-sm-6">
+                                    <button class="btn btn-primary" type="submit">Reverse</button>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+            </div>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
                 <div class="col-4 col-sm-2 offset-1">
-            <h5>Links</h5>
-            <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sites</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa-2x fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa-2x fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa-2x fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa-2x fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                </div>
+           </div>
         </div>
-        <div class="col-6 col-sm-5 text-center">
-            <h5>Social</h5>
-            <a href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
-            <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
-            <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-            <a href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-        </div>
-        <div class="col-sm-4">
-            <i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234<br />
-                      <i class="fa fa-envelope fa-lg text-primary"></i> campsites@nucamp.co
-        </div>
-
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-4 col-sm-2 offset-1">
-                <h5>Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="#">Sites</a></li>
-                    <li><a href="contactus.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-sm-5 text-center">
-                <h5>Social</h5>
-                <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
-                <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
-                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-            </div>
-            <div class="col-sm-4 text-center">
-                <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
-                <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
-            </div>
-       </div>
-    </div>
-</footer>
+    </footer>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
