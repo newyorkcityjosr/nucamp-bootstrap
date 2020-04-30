@@ -37,4 +37,6 @@ header h2 {
 #carouselButton {
   position: absolute;
   right: 0;
-  bottom: 0; }
+  bottom: 0; 
+  z-index: 3;
+}
